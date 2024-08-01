@@ -6,7 +6,7 @@ export default defineConfig({
     logo: 'https://cdn.jsdelivr.net/gh/ye-guo/Images/images/ygIcon512.png',
     prefersColor: { default: 'auto' },
     socialLinks: {
-      github: 'https://github.com/umijs/dumi',
+      github: 'https://github.com/ye-guo/yeguo-api-docs',
     },
     lastUpdated: true,
     footer: 'Copyright © 2024 野果'
@@ -16,5 +16,4 @@ export default defineConfig({
   ],
   locales: [{ id: 'zh-CN', name: '中文' }],
   theme: { '@c-primary': '#fca92f' },
-
 });

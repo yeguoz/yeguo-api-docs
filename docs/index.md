@@ -2,12 +2,12 @@
 title: 开发者文档
 hero:
   title: YGAPI
-  description: 🚀简化开发
+  description: 🚀简化开发，提高效率
   actions:
     - text: 快速上手
       link: /guide
-    - text: GitHub
-      link:
+    - text: YGAPI开放平台
+      link: https://api.yeguo.icu
 features:
   - title: 提升开发效率
     emoji: 🚀
@@ -28,3 +28,12 @@ features:
     emoji: 💬
     description: 大多数 SDK 都附带了详细的文档和技术支持，帮助开发者解决集成过程中遇到的问题，确保项目的顺利推进。
 ---
+
+## 反馈与共建
+
+请访问<a href="https://github.com/ye-guo/yeguo-api-docs/issues" target="_blank" rel="noopener noreferrer">GitHub</a><br/><br/>
+或联系我
+
+<div>
+  <img data-type="dingtalk" src="https://cdn.jsdelivr.net/gh/ye-guo/Images/images/myWeChat.jpg" width="300" />
+</div>
