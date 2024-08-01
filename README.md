@@ -1,7 +1,7 @@
 <div align="center">
   <img data-type="dingtalk" src="https://cdn.jsdelivr.net/gh/ye-guo/Images/images/ygIcon512.png" width="100" />
-  <p style="font-weight: bold;,font-size:20px">YGAPI 开发者文档</p>
 </div>
+  <h2 style="font-weight: bold;,font-size:20px">YGAPI 开发者文档</h2>
 
 ---
 
