@@ -18,25 +18,25 @@ group:
 
 ## 🔢 请求参数
 
-| 参数名 | 必填 | 类型      | 说明   |
-| ------ | ---- | --------- | ------ |
-| 无     | 否   | undefined | 无参数 |
+| 参数名 | 必填 |   类型    |  说明  |
+| :----: | :--: | :-------: | :----: |
+|   无   |  否  | undefined | 无参数 |
 
 ## 💬 响应参数
 
-| 参数名称     | 类型   | 说明         |
-| ------------ | ------ | ------------ |
-| date         | number | 当前数据日期 |
-| mov_area     | string | 电影地区     |
-| mov_director | string | 导演         |
-| mov_intro    | string | 电影描述     |
-| mov_link     | string | 豆瓣链接     |
-| mov_pic      | string | 电影封面     |
-| mov_rating   | number | 电影评分     |
-| mov_text     | string | 电影描述     |
-| mov_title    | string | 电影名称     |
-| mov_type     | object | 电影类型     |
-| mov_year     | string | 电影年份     |
+|   参数名称   |  类型  |     说明     |
+| :----------: | :----: | :----------: |
+|     date     | number | 当前数据日期 |
+|   mov_area   | string |   电影地区   |
+| mov_director | string |     导演     |
+|  mov_intro   | string |   电影描述   |
+|   mov_link   | string |   豆瓣链接   |
+|   mov_pic    | string |   电影封面   |
+|  mov_rating  | number |   电影评分   |
+|   mov_text   | string |   电影描述   |
+|  mov_title   | string |   电影名称   |
+|   mov_type   | object |   电影类型   |
+|   mov_year   | string |   电影年份   |
 
 ## 📜 代码示例
 
@@ -53,6 +53,7 @@ yeguo:
   api:
     access-key: your-accessKey
     secret-key: your-secretKey
+    gateway: 'https://gw.yeguo.icu'
 ```
 
 **调用接口**
@@ -76,7 +77,8 @@ try {
 try {
       String accessKey = "your-accessKey";
       String secretKey = "your-secretKey";
-      ygApiClient = new YGApiClient(accessKey,secretKey);
+      String gateway = "https://gw.yeguo.icu";
+      YGApiClient ygApiClient = new YGApiClient(accessKey,secretKey,gateway);
       String result = ygApiClient.getOneFilm();
       System.out.println(result);
     } catch (YGApiException e) {

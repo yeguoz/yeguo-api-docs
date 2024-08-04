@@ -18,20 +18,20 @@ group:
 
 ## 🔢 请求参数
 
-| 参数名 | 必填 | 类型      | 说明 |
-| ------ | ---- | --------- | ---- |
-| 无     | 否   | undefined | 无   |
+| 参数名 | 必填 |   类型    | 说明 |
+| :----: | :--: | :-------: | :--: |
+|   无   |  否  | undefined |  无  |
 
 ## 💬 响应参数
 
-| 参数名称   | 类型   | 说明           |
-| ---------- | ------ | -------------- |
-| native     | string | 原始名字       |
-| english    | string | 英文名字       |
-| episode    | number | 所在集         |
-| similarity | number | 相似指数       |
-| from       | number | 开始时间（秒） |
-| to         | number | 结束时间（秒） |
+|  参数名称  |  类型  |      说明      |
+| :--------: | :----: | :------------: |
+|   native   | string |    原始名字    |
+|  english   | string |    英文名字    |
+|  episode   | number |     所在集     |
+| similarity | number |    相似指数    |
+|    from    | number | 开始时间（秒） |
+|     to     | number | 结束时间（秒） |
 
 ## 📜 代码示例
 
@@ -48,6 +48,7 @@ yeguo:
   api:
     access-key: your-accessKey
     secret-key: your-secretKey
+    gateway: 'https://gw.yeguo.icu'
 ```
 
 **调用接口**
@@ -71,7 +72,8 @@ try {
 try {
       String accessKey = "your-accessKey";
       String secretKey = "your-secretKey";
-      ygApiClient = new YGApiClient(accessKey,secretKey);
+      String gateway = "https://gw.yeguo.icu";
+      YGApiClient ygApiClient = new YGApiClient(accessKey,secretKey,gateway);
       String result = ygApiClient.getTodayInfo();
       System.out.println(result);
     } catch (YGApiException e) {

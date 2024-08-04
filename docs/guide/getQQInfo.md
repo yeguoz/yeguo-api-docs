@@ -18,21 +18,21 @@ group:
 
 ## 🔢 请求参数
 
-| 参数名 | 必填 | 类型   | 说明    |
-| ------ | ---- | ------ | ------- |
-| qq     | 是   | number | qq 账号 |
+| 参数名 | 必填 |  类型  |  说明   |
+| :----: | :--: | :----: | :-----: |
+|   qq   |  是  | number | qq 账号 |
 
 ## 💬 响应参数
 
-| 参数名     | 类型   | 说明                            |
-| ---------- | ------ | ------------------------------- |
-| nickname   | string | QQ 昵称                         |
-| user_id    | string | QQ 号                           |
-| sex        | string | 性别, male 或 female 或 unknown |
-| age        | number | 年龄                            |
-| qid        | number | qid ID 身份卡                   |
-| level      | number | 等级                            |
-| login_days | number | 连续登录天数                    |
+|   参数名   |  类型  |              说明               |
+| :--------: | :----: | :-----------------------------: |
+|  nickname  | string |             QQ 昵称             |
+|  user_id   | string |              QQ 号              |
+|    sex     | string | 性别, male 或 female 或 unknown |
+|    age     | number |              年龄               |
+|    qid     | number |          qid ID 身份卡          |
+|   level    | number |              等级               |
+| login_days | number |          连续登录天数           |
 
 ## 📜 代码示例
 
@@ -49,6 +49,7 @@ yeguo:
   api:
     access-key: your-accessKey
     secret-key: your-secretKey
+    gateway: 'https://gw.yeguo.icu'
 ```
 
 **调用接口**
@@ -72,7 +73,8 @@ try {
 try {
       String accessKey = "your-accessKey";
       String secretKey = "your-secretKey";
-      ygApiClient = new YGApiClient(accessKey,secretKey);
+      String gateway = "https://gw.yeguo.icu";
+      YGApiClient ygApiClient = new YGApiClient(accessKey,secretKey,gateway);
       String result = ygApiClient.getQQInfo(13456289L);
       System.out.println(result);
     } catch (YGApiException e) {

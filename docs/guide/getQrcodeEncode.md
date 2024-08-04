@@ -18,16 +18,16 @@ group:
 
 ## 🔢 请求参数
 
-| 参数名 | 必填 | 类型   | 说明                       |
-| ------ | ---- | ------ | -------------------------- |
-| text   | 是   | string | 文本内容                   |
-| m      | 否   | number | 边距，可选值{0,10}，默认 2 |
+| 参数名 | 必填 |  类型  |            说明            |
+| :----: | :--: | :----: | :------------------------: |
+|  text  |  是  | string |          文本内容          |
+|   m    |  否  | number | 边距，可选值{0,10}，默认 2 |
 
 ## 💬 响应参数
 
-| 参数名称 | 类型   | 说明                             |
-| -------- | ------ | -------------------------------- |
-|          | string | 返回 svg，在线调用会格式化为图片 |
+| 参数名称 |  类型  |               说明               |
+| :------: | :----: | :------------------------------: |
+|  result  | string | 返回 svg，在线调用会格式化为图片 |
 
 ## 📜 代码示例
 
@@ -44,6 +44,7 @@ yeguo:
   api:
     access-key: your-accessKey
     secret-key: your-secretKey
+    gateway: 'https://gw.yeguo.icu'
 ```
 
 **调用接口**
@@ -67,7 +68,8 @@ try {
 try {
       String accessKey = "your-accessKey";
       String secretKey = "your-secretKey";
-      ygApiClient = new YGApiClient(accessKey,secretKey);
+      String gateway = "https://gw.yeguo.icu";
+      YGApiClient ygApiClient = new YGApiClient(accessKey,secretKey,gateway);
       String result = ygApiClient.getQrcodeEncode("https://api.yeguo.icu");
       System.out.println(result);
     } catch (YGApiException e) {

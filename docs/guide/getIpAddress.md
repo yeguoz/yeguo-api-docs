@@ -19,18 +19,18 @@ group:
 
 ## 🔢 请求参数
 
-| 参数名 | 必填 | 类型   | 说明                |
-| ------ | ---- | ------ | ------------------- |
-| ip     | 是   | string | 支持 IPV4/IPV6 地址 |
+| 参数名 | 必填 |  类型  |        说明         |
+| :----: | :--: | :----: | :-----------------: |
+|   ip   |  是  | string | 支持 IPV4/IPV6 地址 |
 
 ## 💬 响应参数
 
-| 参数名 | 类型   | 说明      |
-| ------ | ------ | --------- |
+| 参数名 |  类型  |   说明    |
+| :----: | :----: | :-------: |
 | start  | string | IP 段开始 |
-| end    | string | IP 段结束 |
-| addr   | object | IP 归属地 |
-| disp   | string | 运营商    |
+|  end   | string | IP 段结束 |
+|  addr  | object | IP 归属地 |
+|  disp  | string |  运营商   |
 
 ## 📜 代码示例
 
@@ -47,6 +47,7 @@ yeguo:
   api:
     access-key: your-accessKey
     secret-key: your-secretKey
+    gateway: 'https://gw.yeguo.icu'
 ```
 
 **调用接口**
@@ -70,7 +71,8 @@ try {
 try {
       String accessKey = "your-accessKey";
       String secretKey = "your-secretKey";
-      ygApiClient = new YGApiClient(accessKey,secretKey);
+      String gateway = "https://gw.yeguo.icu";
+      YGApiClient ygApiClient = new YGApiClient(accessKey,secretKey,gateway);
       String result = ygApiClient.getIpAddress("111.56.36.134");
       System.out.println(result);
     } catch (YGApiException e) {

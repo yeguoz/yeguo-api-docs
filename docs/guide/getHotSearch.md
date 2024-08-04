@@ -18,18 +18,18 @@ group:
 
 ## 🔢 请求参数
 
-| 参数名 | 必填 | 类型   | 说明                                                                                                                                               |
-| ------ | ---- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type   | 是   | string | 平台:[baidu]百度；[zhihu]知乎；[weixin]微信；[bilibili]哔哩哔哩；[douyin]抖音；[news]腾讯新闻；[lishi]历史上的今天；[toutiao]今日头条；[weibo]微博 |
+| 参数名 | 必填 |  类型  |                                                                        说明                                                                         |
+| :----: | :--: | :----: | :-------------------------------------------------------------------------------------------------------------------------------------------------: |
+|  type  |  是  | string | 平台: [baidu]百度；[zhihu]知乎；[weixin]微信；[bilibili]哔哩哔哩；[douyin]抖音；[news]腾讯新闻；[lishi]历史上的今天；[toutiao]今日头条；[weibo]微博 |
 
 ## 💬 响应参数
 
-| 参数名称 | 类型   | 说明   |
-| -------- | ------ | ------ |
-| title    | string | 标题   |
-| index    | number | 索引   |
+| 参数名称 |  类型  |  说明  |
+| :------: | :----: | :----: |
+|  title   | string |  标题  |
+|  index   | number |  索引  |
 | hotValue | string | 热度值 |
-| link     | string | 链接   |
+|   link   | string |  链接  |
 
 ## 📜 代码示例
 
@@ -46,6 +46,7 @@ yeguo:
   api:
     access-key: your-accessKey
     secret-key: your-secretKey
+    gateway: 'https://gw.yeguo.icu'
 ```
 
 **调用接口**
@@ -69,7 +70,8 @@ try {
 try {
       String accessKey = "your-accessKey";
       String secretKey = "your-secretKey";
-      ygApiClient = new YGApiClient(accessKey,secretKey);
+      String gateway = "https://gw.yeguo.icu";
+      YGApiClient ygApiClient = new YGApiClient(accessKey,secretKey,gateway);
       String result = ygApiClient.getHotSearch("bilibili");
       System.out.println(result);
     } catch (YGApiException e) {

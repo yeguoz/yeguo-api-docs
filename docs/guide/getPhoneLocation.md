@@ -18,20 +18,20 @@ group:
 
 ## 🔢 请求参数
 
-| 参数名 | 必填 | 类型   | 说明        |
-| ------ | ---- | ------ | ----------- |
-| mobile | 是   | string | 11 位手机号 |
+| 参数名 | 必填 |  类型  |    说明     |
+| :----: | :--: | :----: | :---------: |
+| mobile |  是  | string | 11 位手机号 |
 
 ## 💬 响应参数
 
-| 参数名称 | 类型   | 说明       |
-| -------- | ------ | ---------- |
-| prov     | string | 省         |
-| city     | string | 市         |
-| name     | string | 运营商     |
-| areaCode | number | 区域代码   |
-| postCode | number | 邮政编码   |
-| cityCode | number | 行政代码   |
+| 参数名称 |  类型  |    说明    |
+| :------: | :----: | :--------: |
+|   prov   | string |     省     |
+|   city   | string |     市     |
+|   name   | string |   运营商   |
+| areaCode | number |  区域代码  |
+| postCode | number |  邮政编码  |
+| cityCode | number |  行政代码  |
 | provCode | number | 省行政代码 |
 
 ## 📜 代码示例
@@ -49,6 +49,7 @@ yeguo:
   api:
     access-key: your-accessKey
     secret-key: your-secretKey
+    gateway: 'https://gw.yeguo.icu'
 ```
 
 **调用接口**
@@ -72,7 +73,8 @@ try {
 try {
       String accessKey = "your-accessKey";
       String secretKey = "your-secretKey";
-      ygApiClient = new YGApiClient(accessKey,secretKey);
+      String gateway = "https://gw.yeguo.icu";
+      YGApiClient ygApiClient = new YGApiClient(accessKey,secretKey,gateway);
       String result = ygApiClient.getPhoneLocation("17730259645");
       System.out.println(result);
     } catch (YGApiException e) {

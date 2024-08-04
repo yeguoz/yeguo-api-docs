@@ -24,7 +24,7 @@ nav:
 <dependency>
     <groupId>icu.yeguo.common</groupId>
     <artifactId>yeguo-api-sdk</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 </dependency>
 
 ```
@@ -33,7 +33,7 @@ nav:
 
 ```gradle
 
-  implementation 'icu.yeguo.common:yeguo-api-sdk:0.0.1'
+  implementation 'icu.yeguo.common:yeguo-api-sdk:0.0.2'
 
 ```
 

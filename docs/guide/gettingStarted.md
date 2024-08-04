@@ -16,7 +16,7 @@ group:
 <dependency>
     <groupId>icu.yeguo.common</groupId>
     <artifactId>yeguo-api-sdk</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 </dependency>
 
 ```
@@ -25,7 +25,7 @@ group:
 
 ```gradle
 
-implementation 'icu.yeguo.common:yeguo-api-sdk:0.0.1'
+implementation 'icu.yeguo.common:yeguo-api-sdk:0.0.2'
 
 ```
 
@@ -43,9 +43,10 @@ maven 中央仓库：<a href="https://repo1.maven.org/maven2/icu/yeguo/common/ye
 
   ```javascript
 
-  String accessKey = "290F6AA4F0BFE8F584DE60D25E56706F";
-  String secretKey = "3F661CAD463534FC5634D095F81AC605";
-  YGApiClient ygApiClient = new YGApiClient(accessKey,secretKey);
+  String accessKey = "your-accessKey";
+  String secretKey = "your-secretKey";
+  String gateway = "https://gw.yeguo.icu";
+  YGApiClient ygApiClient = new YGApiClient(accessKey,secretKey,gateway);
 
   ```
 
@@ -58,14 +59,15 @@ maven 中央仓库：<a href="https://repo1.maven.org/maven2/icu/yeguo/common/ye
     api:
       access-key: your-accessKey
       secret-key: your-secretKey
+      gateway: 'https://gw.yeguo.icu'
   ```
 
   - properties
 
   ```properties
-
   yeguo.api.access-key = your-accessKey
   yeguo.api.secret-key = your-secretKey
+  yeguo.api.gateway = "https://gw.yeguo.icu"
   ```
 
   **注入对象**
@@ -88,7 +90,8 @@ maven 中央仓库：<a href="https://repo1.maven.org/maven2/icu/yeguo/common/ye
 try {
       String accessKey = "your-accessKey";
       String secretKey = "your-secretKey";
-      ygApiClient = new YGApiClient(accessKey,secretKey);
+      String gateway = "https://gw.yeguo.icu";
+      ygApiClient = new YGApiClient(accessKey,secretKey,gateway);
       String result = ygApiClient.getIpAddress("111.56.36.134");
       System.out.println(result);
     } catch (YGApiException e) {

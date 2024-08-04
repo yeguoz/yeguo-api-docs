@@ -17,17 +17,16 @@ group:
 
 ## 🔢 请求参数
 
-| 参数名    | 必填 | 类型           | 说明                                                          |
-| --------- | ---- | -------------- | ------------------------------------------------------------- |
-| file      | 是   | file \| string | 二维码图片文件,文件大小不要超过 5MB，SDK 调用传入文件路径即可 |
-| accessKey | 是   | string         | 调用凭证，在线调用可不携带                                    |
-| accessKey | 是   | string         | 调用凭证，在线调用可不携带                                    |
+|  参数名   | 必填 |      类型      |                                     说明                                      |
+| :-------: | :--: | :------------: | :---------------------------------------------------------------------------: |
+|   file    |  是  | file \| string | 二维码图片文件, 在线调试文件尽量小过大可能会无响应,，SDK 调用传入文件路径即可 |
+| accessKey |  是  |     string     |                          调用凭证，在线调用可不携带                           |
 
 ## 💬 响应参数
 
-| 参数名称 | 类型   | 说明     |
-| -------- | ------ | -------- |
-| result   | string | 解析内容 |
+| 参数名称 |  类型  |   说明   |
+| :------: | :----: | :------: |
+|  result  | string | 解析内容 |
 
 ## 📜 代码示例
 
@@ -44,6 +43,7 @@ yeguo:
   api:
     access-key: your-accessKey
     secret-key: your-secretKey
+    gateway: 'https://gw.yeguo.icu'
 ```
 
 **调用接口**
@@ -67,7 +67,8 @@ try {
 try {
       String accessKey = "your-accessKey";
       String secretKey = "your-secretKey";
-      ygApiClient = new YGApiClient(accessKey,secretKey);
+      String gateway = "https://gw.yeguo.icu";
+      YGApiClient ygApiClient = new YGApiClient(accessKey,secretKey,gateway);
       String result = ygApiClient.getQrcodeDecode("C:\Users\example\Pictures\1.jpg");
       System.out.println(result);
     } catch (YGApiException e) {

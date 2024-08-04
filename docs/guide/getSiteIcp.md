@@ -18,22 +18,22 @@ group:
 
 ## 🔢 请求参数
 
-| 参数名 | 必填 | 类型   | 说明       |
-| ------ | ---- | ------ | ---------- |
-| domain | 是   | string | 查询的域名 |
+| 参数名 | 必填 |  类型  |    说明    |
+| :----: | :--: | :----: | :--------: |
+| domain |  是  | string | 查询的域名 |
 
 ## 💬 响应参数
 
-| 参数名称     | 类型   | 说明           |
-| ------------ | ------ | -------------- |
-| icp          | string | 主办单位备案号 |
-| company_name | string | 主办单位名称   |
-| company_type | string | 主办单位性质   |
-| date         | string | 审核时间       |
-| site_name    | string | 网站名称       |
-| type         | string | 备案类型       |
-| is_icp       | string | 是否备案       |
-| domain       | string | 备案域名       |
+|   参数名称   |  类型  |      说明      |
+| :----------: | :----: | :------------: |
+|     icp      | string | 主办单位备案号 |
+| company_name | string |  主办单位名称  |
+| company_type | string |  主办单位性质  |
+|     date     | string |    审核时间    |
+|  site_name   | string |    网站名称    |
+|     type     | string |    备案类型    |
+|    is_icp    | string |    是否备案    |
+|    domain    | string |    备案域名    |
 
 ## 📜 代码示例
 
@@ -50,6 +50,7 @@ yeguo:
   api:
     access-key: your-accessKey
     secret-key: your-secretKey
+    gateway: 'https://gw.yeguo.icu'
 ```
 
 **调用接口**
@@ -73,7 +74,8 @@ try {
 try {
       String accessKey = "your-accessKey";
       String secretKey = "your-secretKey";
-      ygApiClient = new YGApiClient(accessKey,secretKey);
+      String gateway = "https://gw.yeguo.icu";
+      YGApiClient ygApiClient = new YGApiClient(accessKey,secretKey,gateway);
       String result = ygApiClient.getSiteIcp("qq.com");
       System.out.println(result);
     } catch (YGApiException e) {

@@ -18,20 +18,20 @@ group:
 
 ## 🔢 请求参数
 
-| 参数名    | 必填 | 类型   | 说明 |
-| --------- | ---- | ------ | ---- |
-| city_name | 是   | string | 市   |
+|  参数名   | 必填 |  类型  | 说明 |
+| :-------: | :--: | :----: | :--: |
+| city_name |  是  | string |  市  |
 
 ## 💬 响应参数
 
-| 参数名称            | 类型   | 说明                 |
-| ------------------- | ------ | -------------------- |
-| city_name           | string | 地区                 |
-| current_condition   | string | 当前天气             |
-| current_temperature | number | 当前天气温度         |
-| current_time        | number | 数据更新时间         |
-| tips                | string | 天气温馨提示         |
-| forecast_list       | object | 未来 16 天，天气预测 |
+|      参数名称       |  类型  |         说明         |
+| :-----------------: | :----: | :------------------: |
+|      city_name      | string |         地区         |
+|  current_condition  | string |       当前天气       |
+| current_temperature | number |     当前天气温度     |
+|    current_time     | number |     数据更新时间     |
+|        tips         | string |     天气温馨提示     |
+|    forecast_list    | object | 未来 16 天，天气预测 |
 
 ## 📜 代码示例
 
@@ -48,6 +48,7 @@ yeguo:
   api:
     access-key: your-accessKey
     secret-key: your-secretKey
+    gateway: 'https://gw.yeguo.icu'
 ```
 
 **调用接口**
@@ -71,7 +72,8 @@ try {
 try {
       String accessKey = "your-accessKey";
       String secretKey = "your-secretKey";
-      ygApiClient = new YGApiClient(accessKey,secretKey);
+      String gateway = "https://gw.yeguo.icu";
+      YGApiClient ygApiClient = new YGApiClient(accessKey,secretKey,gateway);
       String result = ygApiClient.getCityWeather("洛阳市");
       System.out.println(result);
     } catch (YGApiException e) {
