@@ -10,9 +10,107 @@ group:
 
 # ✨ 简介
 
-🎉 欢迎阅读 **YGAPI 开发者文档**！本文档旨在为您提供 <a href="https://api.yeguo.icu" target="_blank" rel="noopener noreferrer">YGAPI 接口开放平台</a> 的 <a href="https://github.com/ye-guo/yeguo-api-sdk" target="_blank" rel="noopener noreferrer"> YG-API-SDK </a>（以下简称 SDK） 使用指南。通过本指南，您可以快速、稳定、安全地将 <a href="https://github.com/ye-guo/yeguo-api-sdk" target="_blank" rel="noopener noreferrer"> SDK </a> 集成到您的项目中，从而实现高效的开发和调用体验。
-
-<a href="https://api.yeguo.icu" target="_blank" rel="noopener noreferrer">YGAPI 开放平台</a>提供的<a href="https://github.com/ye-guo/yeguo-api-sdk" target="_blank" rel="noopener noreferrer"> SDK </a>将帮助您简化接口集成流程，提高开发效率，确保安全性，并优化调用体验。我们致力于为您提供便捷、快速的开发工具，以支持您在项目中实现更高效的功能集成。
+🎉 欢迎阅读 **YGAPI 开发者文档**！本文档旨在为您提供
+<a href="https://api.yeguo.icu" target="_blank" rel="noopener noreferrer">YGAPI 接口开放平台
+<svg
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          x="0px"
+          y="0px"
+          viewBox="0 0 100 100"
+          width="15"
+          height="15"
+        >
+<path
+            fill="currentColor"
+            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"
+          ></path>
+<polygon
+            fill="currentColor"
+            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"
+          ></polygon>
+</svg>
+</a> 的
+<a href="https://github.com/ye-guo/yeguo-api-sdk" target="_blank" rel="noopener noreferrer"> YG-API-SDK
+<svg
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          x="0px"
+          y="0px"
+          viewBox="0 0 100 100"
+          width="15"
+          height="15"
+        >
+<path
+            fill="currentColor"
+            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"
+          ></path>
+<polygon
+            fill="currentColor"
+            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"
+          ></polygon>
+</svg>
+</a>（以下简称 SDK） 使用指南。通过本指南，您可以快速、稳定、安全地将
+<a href="https://github.com/ye-guo/yeguo-api-sdk" target="_blank" rel="noopener noreferrer"> SDK
+<svg
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          x="0px"
+          y="0px"
+          viewBox="0 0 100 100"
+          width="15"
+          height="15"
+        >
+<path
+            fill="currentColor"
+            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"
+          ></path>
+<polygon
+            fill="currentColor"
+            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"
+          ></polygon>
+</svg>
+</a> 集成到您的项目中，从而实现高效的开发和调用体验。
+<a href="https://api.yeguo.icu" target="_blank" rel="noopener noreferrer">YGAPI 开放平台
+<svg
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          x="0px"
+          y="0px"
+          viewBox="0 0 100 100"
+          width="15"
+          height="15"
+        >
+<path
+            fill="currentColor"
+            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"
+          ></path>
+<polygon
+            fill="currentColor"
+            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"
+          ></polygon>
+</svg>
+</a>提供的
+<a href="https://github.com/ye-guo/yeguo-api-sdk" target="_blank" rel="noopener noreferrer"> SDK
+<svg
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          x="0px"
+          y="0px"
+          viewBox="0 0 100 100"
+          width="15"
+          height="15"
+        >
+<path
+            fill="currentColor"
+            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"
+          ></path>
+<polygon
+            fill="currentColor"
+            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"
+          ></polygon>
+</svg>
+</a>将帮助您简化接口集成流程，提高开发效率，确保安全性，并优化调用体验。我们致力于为您提供便捷、快速的开发工具，以支持您在项目中实现更高效的功能集成。
 
 ## 特性
 
