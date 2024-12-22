@@ -24,7 +24,7 @@ nav:
 <dependency>
     <groupId>icu.yeguo.common</groupId>
     <artifactId>yeguo-api-sdk</artifactId>
-    <version>0.0.2</version>
+    <version>1.0.0</version>
 </dependency>
 
 ```
@@ -33,11 +33,11 @@ nav:
 
 ```gradle
 
-  implementation 'icu.yeguo.common:yeguo-api-sdk:0.0.2'
+  implementation 'icu.yeguo.common:yeguo-api-sdk:1.0.0'
 
 ```
 
-### 🗝️ accessKey、secretKey 密钥对
+### 🗝️ accessKey、secretKey
 
 使用<a href="https://api.yeguo.icu" target="_blank" rel="noopener noreferrer">YGAPI 开放平台
 <svg
