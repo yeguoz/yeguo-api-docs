@@ -71,7 +71,7 @@ Map<String, Object> paramMap = new HashMap<>();
 headers.put(Common.X_ACCESS_KEY, accessKey);
 headers.put(Common.X_TIMESTAMP, ApiUtil.timestamp);
 headers.put(Common.X_NONCE, ApiUtil.nonce);
-headers.put(Common.X_SIGNATURE, sign);
+headers.put(Common.X_SIGNATURE, signature);
 // 请求参数
 paramMap.put("type", "taurus");
 paramMap.put("time", "nextday");
