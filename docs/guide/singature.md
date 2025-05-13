@@ -13,12 +13,20 @@ POST
 X-Access-Key:xxxxxxxxxx
 X-Timestamp:1734665583575
 X-Nonce:3ym1x68426q3p256s126e244f2414p
-
+```
+```js
+请求方法 +"\n"+
+请求url+"\n"+
+"X-Access-Key:"+your-accessKey+"\n"+
+"X-Timestamp:" +当前时间戳+"\n"+
+"X-Nonce:"+随机数(UUID)
 ```
 
 ## 签名算法
 HMAC-SHA256
 
+### 签名密钥
+your-secret-key
 
 ### 请求头
 - X-Access-Key: your-access-key
